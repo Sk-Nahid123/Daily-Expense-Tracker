@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+section {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+}
+
+/* Budget Section */
+#budget-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#monthly-budget {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#budget-progress {
+    width: 100%;
+    height: 25px;
+    background-color: #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+#budget-bar {
+    width: 0;
+    height: 100%;
+    background-color: #2ecc71;
+    transition: width 0.5s ease, background-color 0.3s ease;
+}
+
+#remaining-budget {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Expense Entry */
+#expense-entry {
+    display: flex;
+    flex-direction: column;
+}
+
+#expense-category, 
+#expense-amount, 
+#expense-date, 
+#expense-description {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#add-expense-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#add-expense-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Expenses List */
+#expenses-list {
+    margin-top: 20px;
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+.expense-item span {
+    flex: 1;
+    text-align: center;
+}
+
+/* Analytics Controls */
+.analytics-controls {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#toggle-analytics-btn {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#toggle-analytics-btn:hover {
+    background-color: #27ae60;
+}
+
+/* Charts Container */
+#charts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+#pie-chart, 
+#bar-chart {
+    max-width: 100%;
+    height: 300px;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    #charts-container {
+        flex-direction: column;
+    }
+
+    #pie-chart, 
+    #bar-chart {
+        width: 100%;
+    }
+}

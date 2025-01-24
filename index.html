@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+        
+        <section id="budget-section">
+            <h2>Monthly Budget</h2>
+            <input type="number" id="monthly-budget" placeholder="Set Monthly Budget">
+            <div id="budget-progress">
+                <div id="budget-bar"></div>
+            </div>
+            <span id="remaining-budget"></span>
+        </section>
+
+        <section id="expense-entry">
+            <h2>Add Expense</h2>
+            <select id="expense-category">
+                <option value="">Select Category</option>
+            </select>
+            <input type="number" id="expense-amount" placeholder="Amount">
+            <input type="date" id="expense-date">
+            <textarea id="expense-description" placeholder="Description"></textarea>
+            <button id="add-expense-btn">Add Expense</button>
+        </section>
+
+        <section id="expenses-list">
+            <h2>Recent Expenses</h2>
+            <div id="expense-container"></div>
+        </section>
+
+        <div class="analytics-controls">
+            <button id="toggle-analytics-btn">Show Analytics</button>
+        </div>
+
+        <section id="analytics" class="hidden">
+            <h2>Expense Analytics</h2>
+            <div id="charts-container">
+                <canvas id="pie-chart"></canvas>
+                <canvas id="bar-chart"></canvas>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
